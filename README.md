@@ -31,7 +31,7 @@ If you don't give a calibration matrix, the function will still work, but it wil
 
 This function holds code execution and waits until the screen is touched, and returns the touch coordinates. This is useful when you don't update the screen every frame, and you want your code to continue only after the screen was touched. The input arguments are the `calibration_matrix` which you need to generate prior to calling this function using `Datapixx_calibrate_touchpixx()`. The optional second argument is the `screen_resolution`, which is a two element array. By default, it is set to `[1920, 1080]`, but if you want it to return relative coordinates, but if you want the function to return relative coordinates, set the second input argument to `[1, 1]`.
 
-**This function is NOT interchangeable with `Datapixx_get_touch_coordinatges()`!**
+**This function is NOT interchangeable with `Datapixx_get_touch_coordinates()`!**
 
 # Touch panel: the calibration algorithm
 
