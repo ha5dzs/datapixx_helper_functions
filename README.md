@@ -78,11 +78,12 @@ For this reason, it's advisable to use this line, which tends to minimise garbag
 
 # RepsonsePixx: functions
 
-## `[is_the_button_pressed] = Datapixx_check_button_status(din_number)`
+## `[is_the_button_pressed] = Datapixx_check_button_status(din_number, [OPTIONAL]din_values_as_decimal)`
 
 This function does a bitwise and operation on the DIN (actually, GPIO) lines. With the RESPONSEPixx, when you press a button, you are pulling the corresponding line to the ground, so the selected line will be a logic zero.
 
 This function on the other hand, returns `1` if the button is pressed, and `0` if the button is not pressed. This way, you can just use this function directly in if statements, and its use is more self-explanatory.  
+The presence of the optional argument makes sure that the function itself will not poll the device when executed. The optional argument is the output of `Datapixx('GetDinValues')`, you can call it in-line as well.
 The corresponding numbers are:  
 
 - 0: Red button  
